@@ -1,0 +1,23 @@
+﻿@model MvcMyCv.Models.Entity.tbl_hobi
+
+    @{
+        ViewBag.Title = "HobiGuncelle";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    <br />
+    <h2>Hobi Güncelleme Sayfası</h2>
+    <br />
+    <form method="post">
+        @Html.Label("Hobi ID")
+        @Html.TextBoxFor(x => x.hobi_id_PK, new { @class = "form-control" })
+        <br />
+        @Html.Label("Hobi Başlık")
+        @Html.TextBoxFor(x => x.aciklama_1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Hobi Açıklama 2")
+        @Html.TextBoxFor(x => x.aciklama_2, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+        <a href="/Hobi/HobiSil/@ViewBag.d" class="btn btn-danger">Sil</a>
+
+    </form>

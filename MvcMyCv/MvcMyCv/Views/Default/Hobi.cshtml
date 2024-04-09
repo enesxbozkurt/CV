@@ -1,0 +1,16 @@
+﻿@using MvcMyCv.Models.Entity
+@model List<tbl_hobi>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Hobilerim</h2>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+        <li style="font-size: 25px;">
+            <span class="fa-li"><i class="fas fa-arrow-right text-danger"></i></span>
+            <label><b>@x.aciklama_1 :</b></label>
+            <span style="font-size: 22px;">@x.aciklama_2</span>
+        </li> 
+        }
+        </ul>   
+</div>

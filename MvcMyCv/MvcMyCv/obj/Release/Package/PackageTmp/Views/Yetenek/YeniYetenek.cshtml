@@ -1,0 +1,18 @@
+﻿@model MvcMyCv.Models.Entity.tbl_yetenek
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Yetenek Ekle</h4>
+<br />
+<form method="post">
+    @Html.Label("Yetenek Adı")
+    @Html.TextBoxFor(x => x.yetenek_adi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Derece")
+    @Html.TextBoxFor(x => x.oran, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+

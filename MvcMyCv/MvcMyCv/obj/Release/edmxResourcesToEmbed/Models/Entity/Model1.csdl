@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_cvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_deneyim">
+    <Key>
+      <PropertyRef Name="deneyim_id_PK" />
+    </Key>
+    <Property Name="deneyim_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="alt_baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_egitim">
+    <Key>
+      <PropertyRef Name="egitim_id_PK" />
+    </Key>
+    <Property Name="egitim_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="alt_baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="alt_baslik_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gnortalama" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_giris">
+    <Key>
+      <PropertyRef Name="giris_id_PK" />
+    </Key>
+    <Property Name="giris_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_hakkimda">
+    <Key>
+      <PropertyRef Name="hakkimda_id_PK" />
+    </Key>
+    <Property Name="hakkimda_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="soyisim" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_hobi">
+    <Key>
+      <PropertyRef Name="hobi_id_PK" />
+    </Key>
+    <Property Name="hobi_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aciklama_1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama_2" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_iletisim">
+    <Key>
+      <PropertyRef Name="iletisim_id_PK" />
+    </Key>
+    <Property Name="iletisim_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad_soyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="konu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_sertifika">
+    <Key>
+      <PropertyRef Name="sertifika_id_PK" />
+    </Key>
+    <Property Name="sertifika_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_yetenek">
+    <Key>
+      <PropertyRef Name="yetenek_id_PK" />
+    </Key>
+    <Property Name="yetenek_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yetenek_adi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="oran" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="db_cvEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_deneyim" EntityType="Self.tbl_deneyim" />
+    <EntitySet Name="tbl_egitim" EntityType="Self.tbl_egitim" />
+    <EntitySet Name="tbl_giris" EntityType="Self.tbl_giris" />
+    <EntitySet Name="tbl_hakkimda" EntityType="Self.tbl_hakkimda" />
+    <EntitySet Name="tbl_hobi" EntityType="Self.tbl_hobi" />
+    <EntitySet Name="tbl_iletisim" EntityType="Self.tbl_iletisim" />
+    <EntitySet Name="tbl_sertifika" EntityType="Self.tbl_sertifika" />
+    <EntitySet Name="tbl_yetenek" EntityType="Self.tbl_yetenek" />
+    <EntitySet Name="tbl_sosyal_medya" EntityType="db_cvModel.tbl_sosyal_medya" />
+  </EntityContainer>
+  <EntityType Name="tbl_sosyal_medya">
+    <Key>
+      <PropertyRef Name="sosyal_medya_id_PK" />
+    </Key>
+    <Property Name="sosyal_medya_id_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="Boolean" />
+  </EntityType>
+</Schema>

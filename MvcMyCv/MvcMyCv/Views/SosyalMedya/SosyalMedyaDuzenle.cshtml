@@ -1,0 +1,26 @@
+﻿@model MvcMyCv.Models.Entity.tbl_sosyal_medya
+
+@{
+    ViewBag.Title = "SosyalMedyaDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Sosyal Medya Düzenle</h4>
+<br />
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.sosyal_medya_id_PK, new { @class = "form-control" })
+    <br />
+    @Html.Label("İsim")
+    @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.link, new { @class = "form-control" })
+    <br />
+    @Html.Label("İkon")
+    @Html.TextBoxFor(x => x.ikon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Düzenle</button>
+</form>
+

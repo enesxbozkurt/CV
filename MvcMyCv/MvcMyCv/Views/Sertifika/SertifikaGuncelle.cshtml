@@ -1,0 +1,23 @@
+﻿@model MvcMyCv.Models.Entity.tbl_sertifika
+
+@{
+    ViewBag.Title = "SertifikaGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Sertifika Güncelleme Sayfası</h4>
+<br />
+<form method="post">
+    @Html.Label("Sertifika ID")
+    @Html.TextBoxFor(x => x.sertifika_id_PK, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sertifika Açıklama")
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+    <a href="/Sertifika/SertifikaSil/@ViewBag.d" class="btn btn-danger">Sil</a>
+</form>
+

@@ -1,0 +1,41 @@
+﻿@using MvcMyCv.Models.Entity
+
+@model List<tbl_giris>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Egitim Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kullanıcı Adı</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.giris_id_PK</td>
+            <td>@item.kullanici_adi</td>
+            <td>
+                <a href="/Admin/AdminDuzenle/@item.giris_id_PK" class="btn btn-info btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    Düzenle
+                </a>
+            </td>
+            <td>
+                <a href="/Admin/AdminSil/@item.giris_id_PK" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Admin/AdminEkle/" class="btn btn-primary" target="_blank">Yeni Hesap Ekle</a>
+

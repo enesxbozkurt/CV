@@ -1,0 +1,77 @@
+﻿@using MvcMyCv.Models.Entity
+
+@model List<tbl_hakkimda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Hakkımda Menüsü</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>İsim</label>
+        <input type="text" name="isim" value="@item.isim" class="form-control" />
+        <br />
+        <label>Soyisim</label>
+        <input type="text" name="soyisim" value="@item.soyisim" class="form-control" />
+        <br />
+        <label>Adres</label>
+        <input type="text" name="adres" value="@item.adres" class="form-control" />
+        <br />
+        <label>Telefon</label>
+        <input type="text" name="telefon" value="@item.telefon" class="form-control" />
+        <br />
+        <label>Mail</label>
+        <input type="text" name="mail" value="@item.mail" class="form-control" />
+        <br />
+        <label>Resim</label>
+        <input type="text" name="resim" value="@item.resim" class="form-control" />
+        <br />
+        <label>Açıklama</label>
+        <textarea rows="5" class="form-control" name="aciklama">@item.aciklama</textarea>
+    }
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+
+
+
+
+
+
+
+
+
+
+    @*@Html.Label("Hakkımda ID")
+        @Html.TextBoxFor(x => x.hakkimda_id_PK, new { @class = "form-control" })
+        <br />
+        @Html.Label("İsim")
+        @Html.TextBoxFor(x => x.isim, new { @class = "form-control" })
+        <br />
+        @Html.Label("Soyisim")
+        @Html.TextBoxFor(x => x.soyisim, new { @class = "form-control" })
+        <br />
+        @Html.Label("Adres")
+        @Html.TextBoxFor(x => x.adres, new { @class = "form-control" })
+        <br />
+        @Html.Label("Telefon")
+        @Html.TextBoxFor(x => x.telefon, new { @class = "form-control" })
+        <br />
+        @Html.Label("Mail")
+        @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+        <br />
+        @Html.Label("Resim")
+        @Html.TextBoxFor(x => x.resim, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.soyisim, new { @class = "form-control" })
+        <br />*@
+
+
+</form>
+

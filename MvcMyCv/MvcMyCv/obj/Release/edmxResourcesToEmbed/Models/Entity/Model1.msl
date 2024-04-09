@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_cvModelStoreContainer" CdmEntityContainer="db_cvEntities">
+    <EntitySetMapping Name="tbl_deneyim">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_deneyim">
+        <MappingFragment StoreEntitySet="tbl_deneyim">
+          <ScalarProperty Name="deneyim_id_PK" ColumnName="deneyim_id_PK" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="alt_baslik" ColumnName="alt_baslik" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_egitim">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_egitim">
+        <MappingFragment StoreEntitySet="tbl_egitim">
+          <ScalarProperty Name="egitim_id_PK" ColumnName="egitim_id_PK" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="alt_baslik" ColumnName="alt_baslik" />
+          <ScalarProperty Name="alt_baslik_2" ColumnName="alt_baslik_2" />
+          <ScalarProperty Name="gnortalama" ColumnName="gnortalama" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_giris">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_giris">
+        <MappingFragment StoreEntitySet="tbl_giris">
+          <ScalarProperty Name="giris_id_PK" ColumnName="giris_id_PK" />
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_hakkimda">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_hakkimda">
+        <MappingFragment StoreEntitySet="tbl_hakkimda">
+          <ScalarProperty Name="hakkimda_id_PK" ColumnName="hakkimda_id_PK" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="soyisim" ColumnName="soyisim" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_hobi">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_hobi">
+        <MappingFragment StoreEntitySet="tbl_hobi">
+          <ScalarProperty Name="hobi_id_PK" ColumnName="hobi_id_PK" />
+          <ScalarProperty Name="aciklama_1" ColumnName="aciklama_1" />
+          <ScalarProperty Name="aciklama_2" ColumnName="aciklama_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_iletisim">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_iletisim">
+        <MappingFragment StoreEntitySet="tbl_iletisim">
+          <ScalarProperty Name="iletisim_id_PK" ColumnName="iletisim_id_PK" />
+          <ScalarProperty Name="ad_soyad" ColumnName="ad_soyad" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="konu" ColumnName="konu" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_sertifika">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_sertifika">
+        <MappingFragment StoreEntitySet="tbl_sertifika">
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="sertifika_id_PK" ColumnName="sertifika_id_PK" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_yetenek">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_yetenek">
+        <MappingFragment StoreEntitySet="tbl_yetenek">
+          <ScalarProperty Name="oran" ColumnName="oran" />
+          <ScalarProperty Name="yetenek_id_PK" ColumnName="yetenek_id_PK" />
+          <ScalarProperty Name="yetenek_adi" ColumnName="yetenek_adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_sosyal_medya">
+      <EntityTypeMapping TypeName="db_cvModel.tbl_sosyal_medya">
+        <MappingFragment StoreEntitySet="tbl_sosyal_medya">
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="ikon" ColumnName="ikon" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="sosyal_medya_id_PK" ColumnName="sosyal_medya_id_PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

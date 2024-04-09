@@ -1,0 +1,22 @@
+﻿@model MvcMyCv.Models.Entity.tbl_giris
+
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Hesap Ekle</h4>
+<br />
+<form method="post">
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.kullanici_adi, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.sifre, "", new { @style = "background-color:red;" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.sifre, "", new { @style = "background-color:red;" })
+    <br />
+    <button class="btn btn-info">Yeni Hesap Ekle</button>
+</form>
+
